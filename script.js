@@ -1,23 +1,17 @@
 // Function to handle button click events
 function selectOption(option) {
-    // Check which option was clicked
     if (option === 'yes') {
         // Flash rainbow colors
         flashRainbowColors(function () {
             document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
-            displayThankYouMessage(); // Show the "Thank you" message
+            displayCatHeart(); // Display the cat-heart.gif + message
         });
     } else if (option === 'no') {
-        // Change text on the "No" button to "You sure?"
         document.getElementById('no-button').innerText = 'You sure?';
-        // Increase font size of "Yes" button
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by *2
+        var newSize = parseFloat(currentFontSize) * 2; // Increase font size
         yesButton.style.fontSize = newSize + 'px';
-    } else {
-        alert('Invalid option!');
     }
 }
 
@@ -51,7 +45,7 @@ function displayCat() {
     };
 }
 
-// Function to display the cat-heart.gif and thank you message
+// Function to display the cat-heart.gif and message
 function displayCatHeart() {
     document.getElementById('image-container').innerHTML = ''; // Clear previous content
     var imageContainer = document.getElementById('image-container');
@@ -69,11 +63,12 @@ function displayCatHeart() {
     thankYouMessage.innerText = 'Sabi na Eh!!! Lab na Lab mo ako!! 💖';
 
     // Apply styling to the message
-    thankYouMessage.style.fontSize = '20px';
+    thankYouMessage.style.fontSize = '24px';
     thankYouMessage.style.fontWeight = 'bold';
     thankYouMessage.style.color = '#ff1493'; // Pink color
     thankYouMessage.style.textAlign = 'center';
     thankYouMessage.style.marginTop = '10px';
+    thankYouMessage.style.animation = 'fadeIn 1.5s ease-in-out';
 
     catHeartImage.onload = function () {
         imageContainer.appendChild(catHeartImage); // Add the heart cat image
@@ -81,7 +76,6 @@ function displayCatHeart() {
         document.getElementById('options').style.display = 'none'; // Hide options
     };
 }
-
 
 // Display the cat.gif initially
 displayCat();
