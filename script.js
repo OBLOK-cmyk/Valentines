@@ -50,8 +50,8 @@ function displayCat() {
     catImage.src = 'cat.gif'; // Assuming the cat image is named "cat.gif"
     // Set alternative text for the image (for accessibility)
     catImage.alt = 'Cat';
-    catImage.width = 250; // Approximate wallet width in pixels
-    catImage.height = 350; // Approximate wallet height in pixels
+    catImage.width = 50; // Approximate wallet width in pixels
+    catImage.height = 50; // Approximate wallet height in pixels
 
     // When the cat image is fully loaded, add it to the image container
     catImage.onload = function () {
