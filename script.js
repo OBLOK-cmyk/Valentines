@@ -53,29 +53,35 @@ function displayCat() {
 
 // Function to display the cat-heart.gif and thank you message
 function displayCatHeart() {
-    document.getElementById('image-container').innerHTML = '';
+    document.getElementById('image-container').innerHTML = ''; // Clear previous content
     var imageContainer = document.getElementById('image-container');
+
+    // Create the cat-heart image
     var catHeartImage = new Image();
     catHeartImage.src = 'cat-heart.gif';
     catHeartImage.alt = 'Cat Heart';
+    catHeartImage.width = 150;
+    catHeartImage.height = 150;
+
+    // Create the "Thanks for Accepting" message
+    var thankYouMessage = document.createElement('div');
+    thankYouMessage.id = 'thank-you-message';
+    thankYouMessage.innerText = 'Thanks for Accepting! 💖';
+
+    // Apply styling to the message
+    thankYouMessage.style.fontSize = '20px';
+    thankYouMessage.style.fontWeight = 'bold';
+    thankYouMessage.style.color = '#ff1493'; // Pink color
+    thankYouMessage.style.textAlign = 'center';
+    thankYouMessage.style.marginTop = '10px';
+
     catHeartImage.onload = function () {
-        imageContainer.appendChild(catHeartImage);
+        imageContainer.appendChild(catHeartImage); // Add the heart cat image
+        imageContainer.appendChild(thankYouMessage); // Add the message below
         document.getElementById('options').style.display = 'none'; // Hide options
     };
 }
 
-// Function to display the thank you message
-function displayThankYouMessage() {
-    var textContainer = document.getElementById('text-container');
-    var thankYouMessage = document.createElement('div');
-    thankYouMessage.id = 'thank-you-message';
-    thankYouMessage.innerText = 'Thank you for Accepting! 💖';
-    thankYouMessage.style.fontSize = '24px';
-    thankYouMessage.style.fontWeight = 'bold';
-    thankYouMessage.style.color = '#ff1493'; // Pink color
-    thankYouMessage.style.marginTop = '20px';
-    textContainer.appendChild(thankYouMessage);
-}
 
 // Display the cat.gif initially
 displayCat();
