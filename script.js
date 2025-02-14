@@ -60,8 +60,8 @@ function displayCatHeart() {
     var catHeartImage = new Image();
     catHeartImage.src = 'cat-heart.gif';
     catHeartImage.alt = 'Cat Heart';
-    catHeartImage.width = 150;
-    catHeartImage.height = 150;
+    catHeartImage.width = 200;
+    catHeartImage.height = 200;
 
     // Create the "Thanks for Accepting" message
     var thankYouMessage = document.createElement('div');
