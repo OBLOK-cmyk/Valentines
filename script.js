@@ -44,8 +44,8 @@ function displayCat() {
     var catImage = new Image();
     catImage.src = 'cat.gif';
     catImage.alt = 'Cat';
-    catImage.width = 50;
-    catImage.height = 50;
+    catImage.width = 250;
+    catImage.height = 250;
     catImage.onload = function () {
         imageContainer.appendChild(catImage);
     };
