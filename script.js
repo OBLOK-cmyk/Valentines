@@ -66,7 +66,7 @@ function displayCatHeart() {
     // Create the "Thanks for Accepting" message
     var thankYouMessage = document.createElement('div');
     thankYouMessage.id = 'thank-you-message';
-    thankYouMessage.innerText = 'Thanks for Accepting! 💖';
+    thankYouMessage.innerText = 'Sabi na Eh!!! Lab na Lab mo ako!! 💖';
 
     // Apply styling to the message
     thankYouMessage.style.fontSize = '20px';
